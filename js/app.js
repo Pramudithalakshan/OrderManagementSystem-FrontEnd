@@ -23,7 +23,7 @@ function addCustomerDetails() {
         redirect: "follow"
     };
 
-    fetch("http://127.0.0.1:8080/customer/add-customer", requestOptions)
+    fetch("https://order-management-system-f8d2aba911e1.herokuapp.com/customer/add-customer", requestOptions)
         .then((response) => response.text())
         .then((result) =>{
             swal("Success", result || "Customer added successfully", "success");
@@ -42,7 +42,7 @@ function resetDetails() {
 }
  
 function getCustomers() {
-    fetch("http://localhost:8080/customer/get-customer")
+    fetch("https://order-management-system-f8d2aba911e1.herokuapp.com/customer/get-customer")
         .then(res => res.json())
         .then(customers => {
 
